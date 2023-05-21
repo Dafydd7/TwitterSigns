@@ -1,0 +1,6 @@
+#Sign-Code: This will be the code on the sign, that the plugin will listen out for.
+#Sign-Found: False - Sign has not been found | True - Sign has been found
+#Winner-Name: The name of the player who has won the event.
+Sign-Code: "jsfdjko"
+Sign-Found: false
+Winner-Name: ""

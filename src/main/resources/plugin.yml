@@ -1,0 +1,8 @@
+name: TwitterSigns
+version: '${project.version}'
+main: org.dafy.twittersigns.TwitterSigns
+commands:
+   Twitter:
+    permission-message: "No permission."
+    permission: "twittersigns.commands.admin"
+
