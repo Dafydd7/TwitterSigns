@@ -1,7 +1,6 @@
 package org.dafy.twittersigns.Listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,11 +20,10 @@ public class SignListener implements Listener {
         if(e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         if(e.getClickedBlock() == null) return;
         if (!(e.getClickedBlock().getState() instanceof Sign)) return;
+        if(plugin.getConfig().getBoolean("Sign-Found")) return;
 
         Sign sign = (Sign) e.getClickedBlock().getState();
             if(sign.getLine(1).equals(plugin.getConfig().getString("Sign-Code"))){
-                if(plugin.getConfig().getBoolean("Sign-Found")) return;
-
                 Player player = e.getPlayer();
                 String playerName = player.getName();
                 player.sendMessage("§aCongratulations, you have found the sign!"
